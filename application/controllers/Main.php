@@ -20,7 +20,14 @@ class Main extends CI_Controller {
     }
     
     public function clientes(){
+    	$this->grocery_crud->set_theme('datatables');
     	$this->grocery_crud->set_table('cliente');
+    	$this->grocery_crud->set_subject('Cliente');
+    	$this->grocery_crud->set_language('spanish');
+    	
+    	$this->grocery_crud->required_fields('nombre','apellido');
+    	
+    	
     	$output = $this->grocery_crud->render();
     	
     	$this->_example_output($output);
