@@ -26,6 +26,41 @@ class Main extends CI_Controller {
     	$this->_example_output($output);
     }
     
+    public function categorias(){
+    	$this->grocery_crud->set_table('categoria');
+    	$output = $this->grocery_crud->render();
+    	
+    	$this->_example_output($output);
+    }
+    
+    public function detalles(){
+    	$this->grocery_crud->set_table('detalle');
+    	$output = $this->grocery_crud->render();
+    	 
+    	$this->_example_output($output);
+    }
+    
+    public function facturas(){
+    	$this->grocery_crud->set_table('factura');
+    	$output = $this->grocery_crud->render();
+    	 
+    	$this->_example_output($output);
+    }
+    
+    public function productos(){
+    	$this->grocery_crud->set_table('producto');
+    	$output = $this->grocery_crud->render();
+    	 
+    	$this->_example_output($output);
+    }
+    
+    public function modos_de_pago(){
+    	$this->grocery_crud->set_table('modo_pago');
+    	$output = $this->grocery_crud->render();
+    	 
+    	$this->_example_output($output);
+    }
+    
     function _example_output($output = null){
     	$this->load->view('template.php', $output);
     }

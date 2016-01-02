@@ -34,12 +34,12 @@ a:hover
 <body>
 <!-- Beginning header -->
     <div>
-        <a href='<?php echo site_url('examples/administrar_clientes')?>'>Clientes</a> | 
-        <a href='<?php echo site_url('examples/administrar_categorias')?>'>Categorias</a> |
-        <a href='<?php echo site_url('examples/administrar_detalles')?>'>Detalles</a> |
-        <a href='<?php echo site_url('examples/administrar_facturas')?>'>Facturas</a> |
-        <a href='<?php echo site_url('examples/administrar_productos')?>'>Productos</a> | 
-        <a href='<?php echo site_url('examples/administrar_modospagos')?>'>Modos de Pago</a>
+        <a href='<?php echo site_url('main/clientes')?>'>Clientes</a> | 
+        <a href='<?php echo site_url('main/categorias')?>'>Categorias</a> |
+        <a href='<?php echo site_url('main/detalles')?>'>Detalles</a> |
+        <a href='<?php echo site_url('main/facturas')?>'>Facturas</a> |
+        <a href='<?php echo site_url('main/productos')?>'>Productos</a> | 
+        <a href='<?php echo site_url('main/modos_de_pago')?>'>Modos de Pago</a>
  
     </div>
 <!-- End of header-->
