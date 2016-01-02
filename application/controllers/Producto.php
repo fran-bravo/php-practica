@@ -6,6 +6,10 @@ class Producto extends ControladorBase {
 	
 	public function productos(){
 		$this->grocery_crud->set_table('producto');
+		$this->grocery_crud->set_subject('Producto');
+		$this->grocery_crud->required_fields('nombre','precio', 'stock');
+		$this->grocery_crud->set_relation('id_categoria', 'categoria', '{descripcion}');
+		
 		$output = $this->grocery_crud->render();
 	
 		$this->_example_output($output);

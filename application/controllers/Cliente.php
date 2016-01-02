@@ -7,9 +7,6 @@ class Cliente extends ControladorBase {
 	public function clientes(){
 		$this->grocery_crud->set_table('cliente');
 		$this->grocery_crud->set_subject('Cliente');
-		$this->grocery_crud->set_theme('datatables');
-		$this->grocery_crud->set_language('spanish');
-		 
 		$this->grocery_crud->required_fields('nombre','apellido');
 		 
 		 
