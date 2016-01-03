@@ -5,8 +5,7 @@ include 'ControladorBase.php';
 class Cliente extends ControladorBase {
 	
 	function __construct(){
-		parent::__construct('cliente/clientes');
-		
+		parent::__construct('cliente/clientes');	
 	}	
 	
 	public function clientes(){
