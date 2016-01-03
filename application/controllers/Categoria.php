@@ -4,6 +4,10 @@ include 'ControladorBase.php';
 
 class Categoria extends ControladorBase {
 	
+	function __construct(){
+		parent::__construct('categoria/categorias');
+	}
+	
 	public function categorias(){
 		$this->grocery_crud->set_table('categoria');
 		$this->grocery_crud->set_subject('Categoria');

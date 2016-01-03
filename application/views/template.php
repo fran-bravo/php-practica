@@ -3,9 +3,8 @@
 <head>
     <meta charset="utf-8" />
  
-<?php 
-foreach($css_files as $file): ?>
-    <link type="text/css" rel="stylesheet" href="<?php echo $file; ?>" />
+<?php foreach($css_files as $file): ?>
+    <link type="text/css" rel="stylesheet" href=" <?php echo $file; ?>" />
  
 <?php endforeach; ?>
 <?php foreach($js_files as $file): ?>
@@ -34,12 +33,12 @@ a:hover
 <body>
 <!-- Beginning header -->
     <div>
-        <a href='<?php echo site_url('cliente/clientes')?>'>Clientes</a> | 
-        <a href='<?php echo site_url('categoria/categorias')?>'>Categorias</a> |
-        <a href='<?php echo site_url('detalle/detalles')?>'>Detalles</a> |
-        <a href='<?php echo site_url('factura/facturas')?>'>Facturas</a> |
-        <a href='<?php echo site_url('producto/productos')?>'>Productos</a> | 
-        <a href='<?php echo site_url('modo_pago/modos_de_pago')?>'>Modos de Pago</a>
+        <a href='<?php echo site_url('cliente')?>'>Clientes</a> | 
+        <a href='<?php echo site_url('categoria')?>'>Categorias</a> |
+        <a href='<?php echo site_url('detalle')?>'>Detalles</a> |
+        <a href='<?php echo site_url('factura')?>'>Facturas</a> |
+        <a href='<?php echo site_url('producto')?>'>Productos</a> | 
+        <a href='<?php echo site_url('modo_pago')?>'>Modos de Pago</a>
  
     </div>
 <!-- End of header-->

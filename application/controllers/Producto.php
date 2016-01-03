@@ -4,6 +4,10 @@ include 'ControladorBase.php';
 
 class Producto extends ControladorBase {
 	
+	function __construct(){
+		parent::__construct('producto/productos');
+	}
+	
 	public function productos(){
 		$this->grocery_crud->set_table('producto');
 		$this->grocery_crud->set_subject('Producto');

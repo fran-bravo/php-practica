@@ -4,6 +4,10 @@ include 'ControladorBase.php';
 
 class Modo_Pago extends ControladorBase{
 	
+	function __construct(){
+		parent::__construct('modo_pago/modos_de_pago');
+	}
+	
     public function modos_de_pago(){
     	$this->grocery_crud->set_table('modo_pago');
     	$this->grocery_crud->set_subject('Modo de Pago');

@@ -4,6 +4,10 @@ include 'ControladorBase.php';
 
 class Factura extends ControladorBase {
 	
+	function __construct(){
+		parent::__construct('factura/facturas');
+	}
+	
     public function facturas(){
     	$this->grocery_crud->set_table('factura');
     	$this->grocery_crud->set_subject('Factura');

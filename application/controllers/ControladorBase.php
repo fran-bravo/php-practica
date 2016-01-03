@@ -2,10 +2,13 @@
 
 class ControladorBase extends CI_Controller {
 	
-	function __construct()
+	
+	function __construct($url)
 	{
 		parent::__construct();
 	
+		$this->url = $url;
+		
 		$this->load->database();
 		$this->load->helper('url');
 		/* ------------------ */
@@ -18,6 +21,10 @@ class ControladorBase extends CI_Controller {
 	
 	function _example_output($output = null){
 		$this->load->view('template.php', $output);
+	}
+	
+	function index(){
+		redirect($this->url);
 	}
 }
 ?>

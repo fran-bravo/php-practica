@@ -4,6 +4,11 @@ include 'ControladorBase.php';
 
 class Cliente extends ControladorBase {
 	
+	function __construct(){
+		parent::__construct('cliente/clientes');
+		
+	}	
+	
 	public function clientes(){
 		$this->grocery_crud->set_table('cliente');
 		$this->grocery_crud->set_subject('Cliente');
@@ -14,5 +19,7 @@ class Cliente extends ControladorBase {
 		 
 		$this->_example_output($output);
 	}
+	
+	
 		
 }
