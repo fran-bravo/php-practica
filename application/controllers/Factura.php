@@ -14,6 +14,9 @@ class Factura extends ControladorBase {
     	$this->grocery_crud->required_fields('id_cliente', 'id_modo_pago', 'fecha');
     	$this->grocery_crud->set_relation('id_cliente', 'cliente', '{nombre} {apellido}');
     	$this->grocery_crud->set_relation('id_modo_pago', 'modo_pago', '{otros_detalles}');
+    	$this->grocery_crud->set_relation_n_n('Productos', 'detalle', 'producto', 'id_factura', 'id_producto', 'nombre');
+    	$this->grocery_crud->columns('id_factura', 'id_cliente', 'id_modo_pago', 'fecha', 'Productos');
+    	$this->grocery_crud->display_as('id_cliente', 'Cliente')->display_as('id_modo_pago', 'Modo de Pago')->display_as('id_factura', 'Factura #');
     	
     	$output = $this->grocery_crud->render();
     	 

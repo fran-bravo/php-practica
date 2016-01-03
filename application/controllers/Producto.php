@@ -13,6 +13,8 @@ class Producto extends ControladorBase {
 		$this->grocery_crud->set_subject('Producto');
 		$this->grocery_crud->required_fields('nombre','precio', 'stock');
 		$this->grocery_crud->set_relation('id_categoria', 'categoria', '{descripcion}');
+		$this->grocery_crud->display_as('id_categoria', 'Categoria');
+		
 		
 		$output = $this->grocery_crud->render();
 	
