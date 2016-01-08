@@ -9,13 +9,17 @@ class Categoria extends ControladorBase {
 	}
 	
 	public function categorias(){
-		$this->grocery_crud->set_table('categoria');
-		$this->grocery_crud->set_subject('Categoria');
-		$this->grocery_crud->required_fields('nombre','descripcion');
+		try{
+			$this->grocery_crud->set_table('categoria');
+			$this->grocery_crud->set_subject('Categoria');
+			$this->grocery_crud->required_fields('nombre','descripcion');
 		
-		$output = $this->grocery_crud->render();
+			$output = $this->grocery_crud->render();
 		 
-		$this->_example_output($output);
+			$this->_example_output($output);
+		} catch(Exception $e){
+			show_error($e->getMessage().' --- '.$e->getTraceAsString());
+		}
 	}
 	
 }
